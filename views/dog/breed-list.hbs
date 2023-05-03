@@ -1,0 +1,15 @@
+<div>
+
+  <h3>Lista de Razas</h3>
+
+  {{#each this.allBreeds}}
+
+    {{!-- <li>{{this}}</li> --}}
+    <li>
+      <a href="/perritos/por-raza/{{this}}">{{this}}</a>
+    </li>
+
+  {{/each}}
+
+
+</div>
