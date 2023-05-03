@@ -1,0 +1,21 @@
+<div>
+
+  <h3>Aqui las lecciones de nuestra escuela</h3>
+
+  {{#each this.lessons}}
+
+    <div>
+      <h5>Topic: {{this.topic}}</h5>
+      <p>Descripción: {{this.description}}</p>
+      <p>Bootcamp: {{this.bootcamp}}</p>
+
+      {{#if this.approved}}
+        <p>La lección está aprobada :)</p>
+      {{/if}}
+      
+    </div>
+
+  {{/each}}
+
+
+</div>
