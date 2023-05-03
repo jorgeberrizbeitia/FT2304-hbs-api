@@ -1,0 +1,13 @@
+<div>
+  <h3>Info sobre mi: {{this.username}} </h3>
+  <p>{{this.username}} tiene {{this.age}} años</p>
+  <p>No tengo bigotes pero hbs está bien</p>
+
+  <h4>Hobbies</h4>
+  {{!-- <li>{{this.hobbies}}</li> --}}
+  
+  {{#each this.hobbies}}
+    <li>{{this}}</li>
+  {{/each}}
+
+</div>
