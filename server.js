@@ -61,6 +61,18 @@ app.get("/lessons/approved", (req, res) => {
   })
 })
 
+app.get("/lessons/:bootcamp", (req, res) => {
+  console.log("req.params.bootcamp", req.params.bootcamp)
+
+  const filterArr = allLessons.filter((eachLesson) => {
+    return eachLesson.bootcamp === req.params.bootcamp
+  })
+
+  res.render("lessons-per-bootcamp.hbs", {
+    lessons: filterArr
+  })
+})
+
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
